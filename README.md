@@ -1,11 +1,27 @@
 # SimpleEmbedVideo
 
 ## Description : 
-Cette extension permet d'afficher une vidéo en ligne en ne donnant que son service et son URL. L'utilisateur doit choisir à l'aide de boutons un service puis le champ de l'URL apparaît. 
+This extension allow you to display a video with just its link and service (as Youtube, Vimeo and Dailymotion).
+The user has to choose with some buttons a service and then the link's field appears.
+ 
 
 ##Installation 
-Télécharger et extraire l'extension. La placer dans le dossier "extension" de votre projet, et le dossier de l'extension en elle-même doit aussi se nommer : SimpleEmbedVideo.
 
-Une fois l'extension chargée, à la fin du fichier LocalSettings.php entrez la ligne suivante : 
+Firstly this extension requires PageForm, an other Mediawiki's extension. 
 
-  wfLoadExtension( 'SimpleEmbedVideo' );
+Download and extract the extension in the "extension" repository of your project. Your extension repository name has to be : SimpleEmbedVideo. 
+
+Once it's done,find the file LocalSettings.php and write at the end :
+
+	wfLoadExtension( 'SimpleEmbedVideo' );
+
+##Use
+
+On your MediaWiki page, where you want display a video from its link, enter this code :
+
+	{{#formLinkVideo:{{{field|service|dropdown|class=embedVideoDropdown}}} | {{{field|URL|class=embedVideoUrlInput}}}}} 
+
+This code will display just the form where users choose service and put links.
+Then you enter this one : 
+
+	
