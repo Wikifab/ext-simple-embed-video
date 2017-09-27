@@ -3,7 +3,7 @@
 ## Description : 
 Cette extension permet d'afficher une vidéo en ligne en ne donnant que son service et son URL. L'utilisateur doit choisir à l'aide de boutons un service puis le champ de l'URL apparaît. 
 
-##Installation 
+## Installation 
 
 Tout d'abord l'extension SimpleEmbedVideo ne peut fonctionner si PageForm n'est pas installé. 
 

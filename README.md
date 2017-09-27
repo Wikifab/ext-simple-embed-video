@@ -5,7 +5,7 @@ This extension allow you to display a video with just its link and service (as Y
 The user has to choose with some buttons a service and then the link's field appears.
  
 
-##Installation 
+## Installation 
 
 Firstly this extension requires PageForm, an other Mediawiki's extension. 
 
@@ -15,7 +15,7 @@ Once it's done,find the file LocalSettings.php and write at the end :
 
 	wfLoadExtension( 'SimpleEmbedVideo' );
 
-##Use
+## Use
 
 On your MediaWiki page, where you want display a video from its link, enter this code :
 
