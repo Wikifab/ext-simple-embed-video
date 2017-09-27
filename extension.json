@@ -1,0 +1,40 @@
+{
+	"name": "Simple Embed Video",
+	"author": "Solene",
+	"version": "1.0.0",
+	"url": "https://www.mediawiki.org/wiki/Extension:SimpleEmbedVideo",
+	"descriptionmsg": "Simple Embed Video",
+	"license-name": "GPL-2.0+",
+	"type": "parserhook",
+	"ResourceModules": {
+		"ext.simpleembedvideo.js": {
+			"scripts": [
+				"resources/wikifab-style-embedvideo.js"
+			]
+		},
+		"ext.simpleembedvideo.css": {
+			"styles": [
+				"resources/wikifab-style-embedvideo.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SimpleEmbedVideo"
+	},
+	"AutoloadClasses": {
+		"SimpleEmbedVideo": "includes/SimpleEmbedVideo.class.php"
+	},
+	"ExtensionMessagesFiles": {
+		"SimpleEmbedVideo": "SimpleEmbedVideo.i18n.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"SimpleEmbedVideo::onParserSetup"
+		],
+		"BeforePageDisplay": [
+			"SimpleEmbedVideo::onBeforePageDisplay"
+		]
+	},
+	"manifest_version": 1
+}
