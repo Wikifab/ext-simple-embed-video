@@ -7,7 +7,7 @@ The user has to choose with some buttons a service and then the link's field app
 
 ## Installation 
 
-Firstly this extension requires PageForm, an other Mediawiki's extension. 
+Firstly this extension requires PageForm and EmbedVideo, two Mediawiki's extensions. 
 
 Download and extract the extension in the "extension" repository of your project. Your extension repository name has to be : SimpleEmbedVideo. 
 
@@ -22,6 +22,9 @@ On your MediaWiki page, where you want display a video from its link, enter this
 	{{#formLinkVideo:{{{field|service|dropdown|class=embedVideoDropdown}}} | {{{field|URL|class=embedVideoUrlInput}}}}} 
 
 This code will display just the form where users choose service and put links.
-Then you enter this one : 
+Then you enter this one in you template's code :
+
+	{{#ev:{{{service|}}} | {{{url|}}} }}
+	 
 
 	

@@ -7,12 +7,11 @@ class SimpleEmbedVideo {
       $parser->setFunctionHook( 'formLinkVideo', 'SimpleEmbedVideo::renderFormLinkVideo' );
    }
 
-   // Render the output of {{#example:}}.
-   public static function renderFormLinkVideo( $parser, $param1 = '', $param2 = '') {
+	// 
+	public static function renderFormLinkVideo( $parser, $param1 = '', $param2 = '') {
 
-      // The input parameters are wikitext with templates expanded.
-      // The output should be wikitext too.
-      $out = '<span id="showVideoFormBtn">Bouton</span>';
+      $out ='<span id="returnVideoFormBtn"> Retour </span>';
+      $out .= '<span id="showVideoFormBtn">Bouton</span>';
       $out .= '<span id ="embedVideoLogoYoutube" class="embedVideoLogos" > Youyou </span>';
       $out .= '<span id="embedVideoLogoVimeo" class="embedVideoLogos"> Vivi </span>';
       $out .= '<span id="embedVideoLogoDailymotion" class="embedVideoLogos"> Dada </span>';
@@ -26,6 +25,10 @@ class SimpleEmbedVideo {
       $out .= '</div>';
       
       return array( $out, 'noparse' => true, 'isHTML' => true );
+   }
+   
+   public static function renderSimpleEmbedVideo () {
+   	
    }
    
    public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {

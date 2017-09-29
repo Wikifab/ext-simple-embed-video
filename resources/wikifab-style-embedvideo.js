@@ -7,8 +7,7 @@
 	$(document).ready(function() {
 
 		link = $("#embedVideoFieldLink"); // Variable champ lien
-		videoForm = $(".embedVideoLogos"); // Variable qui contient le formulaire entier
-		
+		videoForm = $(".embedVideoLogos"); // Variable qui contient les logos
 		
 		// Bouton qui permet d'afficher les logos des services 
 		$("#showVideoFormBtn").click(function() {
@@ -30,13 +29,11 @@
 		    $('.embedVideoDropdown').val('dailymotion').trigger('change');
 		})
 
+		// Lorsque la valeur de la dropdown est modifiée alors on affiche un placeholder différent. 
 		$(".embedVideoDropdown").change(function() {
-			console.log('change');
 			ValeurCochee = $(".embedVideoDropdown").val();
-			console.log(ValeurCochee);
 			
 			if (ValeurCochee == 'youtube') {
-				console.log('hello');
 				link.show();
 				$(".embedVideoUrlInput").attr("placeholder", "Entrez le lien Youtube");
 			}
@@ -54,6 +51,12 @@
 				link.css("display", "none");
 
 			}
+		});
+		
+		//Bouton retour qui permet de désafficher les logos et le champ url
+		$("#returnVideoFormBtn").click(function() {
+			videoForm.hide();
+			link.hide(); 
 		});
 	});
 
