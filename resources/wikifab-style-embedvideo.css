@@ -1,11 +1,8 @@
-#embedVideoForm,
-#embedVideoFieldLink,
 .embedVideoLogos
 {
-  display: none;
+	display:block;
 }
-#returnVideoFormBtn
+.embedVideoUrlInput
 {
-	float:right;
+	display:none;
 }
- 

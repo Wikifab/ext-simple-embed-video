@@ -10,11 +10,9 @@ class SimpleEmbedVideo {
 	// 
 	public static function renderFormLinkVideo( $parser, $param1 = '', $param2 = '') {
 
-      $out ='<span id="returnVideoFormBtn"> Retour </span>';
-      $out .= '<span id="showVideoFormBtn">Bouton</span>';
-      $out .= '<span id ="embedVideoLogoYoutube" class="embedVideoLogos" > Youyou </span>';
-      $out .= '<span id="embedVideoLogoVimeo" class="embedVideoLogos"> Vivi </span>';
-      $out .= '<span id="embedVideoLogoDailymotion" class="embedVideoLogos"> Dada </span>';
+      $out = '<span class="embedVideoLogos embedVideoYoutube" > Youtube </span>';
+      $out .= '<span class="embedVideoLogos embedVideoVimeo"> Vimeo </span>';
+      $out .= '<span class="embedVideoLogos embedVideoDailymotion"> Daylimotion </span>';
       
       $out .= '<div id="embedVideoForm">';
       $out .= $param1;
