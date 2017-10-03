@@ -25,7 +25,7 @@ First, you need to create the following Semantic Properties:
 
 ### Create the Semantic Template
 
-Then, you need to create a Semantic template with the following code: 
+Then, you need to create a Semantic template (called "TutoVideo") with the following code: 
 
 	{{#ev:{{{TutoVideoService|}}} | {{{TutoVideoURL|}}} }}
 
