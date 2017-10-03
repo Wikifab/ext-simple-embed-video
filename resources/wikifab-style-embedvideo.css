@@ -9,8 +9,9 @@
     padding-left: 95px;
     overflow: hidden;
     border:1px solid #ddd;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center -3px;
+    opacity: .7;
 }
 
 .embedVideoLogos.embedVideoDailymotion {
@@ -21,6 +22,8 @@
 .embedVideoLogos.active, .embedVideoLogos.active:hover {
 	background-color: #52bad5;
 	border-color: #52bad5;
+    background-position: center -43px;
+    opacity: 1;
 }
 
 .embedVideoYoutube {
@@ -54,6 +57,7 @@
 .embedVideoLogos:hover {
 	cursor: pointer;
     border-color: #bbb;
+    opacity: 1;
 }
 
 .embedVideoUrlInput {
