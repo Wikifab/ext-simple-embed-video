@@ -17,14 +17,29 @@ Once it's done,find the file LocalSettings.php and write at the end :
 
 ## Use
 
+### Create the Semantic Properties
+
+First, you need to create the following Semantic Properties:
+* TutoVideoService (Text)
+* TutoVideoURL (Text)
+
+### Create the Semantic Template
+
+Then, you need to create a Semantic template with the following code: 
+
+	{{#ev:{{{TutoVideoService|}}} | {{{TutoVideoURL|}}} }}
+
+This code will display the video.
+
+For more information, refer to the MediaWiki PageForm extension.
+
+### Create the Semantic Form
+
 On your MediaWiki page, where you want display a video from its link, enter this code :
 
 	{{#formLinkVideo:{{{field|TutoVideoService|dropdown|class=embedVideoDropdown}}} | {{{field|TutoVideoURL|class=embedVideoUrlInput}}}}} 
 
-This code will display just the form where users choose service and put links.
-Then you enter this one in you template's code :
 
-	{{#ev:{{{TutoVideoService|}}} | {{{TutoVideoURL|}}} }}
 	 
 
 	
