@@ -1,8 +1,62 @@
-.embedVideoLogos
-{
-	display:block;
+.embedVideoLogos {
+    display: block;
+    background: #f1f1f1;
+    float: left;
+    width: 95px;
+    margin-right: 10px;
+    height: 36px;
+    border-radius: 4px;
+    padding-left: 120px;
+    overflow: hidden;
+    border:1px solid #ddd;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.embedVideoUrlInput
-{
+
+.embedVideoLogos.embedVideoDailymotion {
+    width: 120px;
+}
+
+.embedVideoLogos.active {
+	background-color:#52bad5;
+	border-color:#52bad5;
+}
+
+.embedVideoYoutube {
+	background-image: url('images/ev-logo-youtube.png')
+}
+
+.embedVideoVimeo {
+	background-image: url('images/ev-logo-vimeo.png')
+}
+
+.embedVideoDailymotion {
+	background-image: url('images/ev-logo-dailymotion.png')
+}
+
+
+
+.multipleTemplateHideButton .multipleTemplateInstance .step-nav a.addAboveButton {
+	display: none;
+}
+
+.multipleTemplateHideButton .multipleTemplateWrapper .col-md-11 {
+	width:auto !important;
+}
+
+.multipleTemplateHideButton .multipleTemplateWrapper .col-md-11 div {
+	float:left !important;
+}
+
+.multipleTemplateHideButton .multipleTemplateWrapper .col-md-1 {
+	padding-left: 0px;
+}
+
+.embedVideoLogos:hover {
+	cursor: pointer;
+    border-color: #aaa;
+}
+
+.embedVideoUrlInput {
 	display:none;
 }
