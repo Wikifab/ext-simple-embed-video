@@ -37,7 +37,11 @@ For more information, refer to the MediaWiki PageForm extension.
 
 On your MediaWiki page, where you want display a video from its link, enter this code :
 
+{{{for template|TutoVideo|multiple|minimum=0|maximum instances=1|add button text=+ Ajouter une vidéo}}}
+
 	{{#formLinkVideo:{{{field|TutoVideoService|dropdown|class=embedVideoDropdown}}} | {{{field|TutoVideoURL|class=embedVideoUrlInput}}}}} 
+	
+	{{{end template}}}
 
 
 	 
