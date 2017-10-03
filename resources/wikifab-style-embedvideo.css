@@ -6,7 +6,7 @@
     margin-right: 10px;
     height: 36px;
     border-radius: 4px;
-    padding-left: 120px;
+    padding-left: 95px;
     overflow: hidden;
     border:1px solid #ddd;
     background-position: center;
@@ -15,11 +15,12 @@
 
 .embedVideoLogos.embedVideoDailymotion {
     width: 120px;
+    padding-left: 120px;
 }
 
-.embedVideoLogos.active {
-	background-color:#52bad5;
-	border-color:#52bad5;
+.embedVideoLogos.active, .embedVideoLogos.active:hover {
+	background-color: #52bad5;
+	border-color: #52bad5;
 }
 
 .embedVideoYoutube {
@@ -33,8 +34,6 @@
 .embedVideoDailymotion {
 	background-image: url('images/ev-logo-dailymotion.png')
 }
-
-
 
 .multipleTemplateHideButton .multipleTemplateInstance .step-nav a.addAboveButton {
 	display: none;
@@ -54,7 +53,7 @@
 
 .embedVideoLogos:hover {
 	cursor: pointer;
-    border-color: #aaa;
+    border-color: #bbb;
 }
 
 .embedVideoUrlInput {
