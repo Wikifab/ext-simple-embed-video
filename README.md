@@ -19,12 +19,12 @@ Once it's done,find the file LocalSettings.php and write at the end :
 
 On your MediaWiki page, where you want display a video from its link, enter this code :
 
-	{{#formLinkVideo:{{{field|service|dropdown|class=embedVideoDropdown}}} | {{{field|URL|class=embedVideoUrlInput}}}}} 
+	{{#formLinkVideo:{{{field|TutoVideoService|dropdown|class=embedVideoDropdown}}} | {{{field|TutoVideoURL|class=embedVideoUrlInput}}}}} 
 
 This code will display just the form where users choose service and put links.
 Then you enter this one in you template's code :
 
-	{{#ev:{{{service|}}} | {{{url|}}} }}
+	{{#ev:{{{TutoVideoService|}}} | {{{TutoVideoURL|}}} }}
 	 
 
 	
