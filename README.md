@@ -41,7 +41,7 @@ On your MediaWiki page, where you want display a video from its link, enter this
 	{{{for template|TutoVideo|multiple|minimum=0|maximum instances=1|add button text=+ Ajouter une vidéo}}}
 	{{#formLinkVideo:{{{field|service|dropdown|class=embedVideoDropdown}}} | {{{field|URL|class=embedVideoUrlInput}}}}} 
 	{{{end template}}}
-
+	</div>
 	 
 
 	
