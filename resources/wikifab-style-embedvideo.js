@@ -25,8 +25,10 @@
 			});
 			
 			if ($(div).find('.embedVideoUrlInput').val() != ''){
+				var serviceNameSelected = $(div).find('.embedVideoDropdown').val();
 				$(div).parents('.multipleTemplateHideButton').find('.multipleTemplateAdder').hide();	
 				$(div).find('.embedVideoUrlInput').show();
+				$(div).find(".embedVideoLogos[data-servicename='" + serviceNameSelected + "']").addClass('active');
 			}
 			else { 
 				$(div).find('.embedVideoUrlInput').hide();
