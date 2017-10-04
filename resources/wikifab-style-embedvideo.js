@@ -14,67 +14,47 @@
 		dropdown.hide();
 		
 		$('.multipleTemplateHideButton .multipleTemplateAdder').click(function(){
+			
 			$(this).hide();
 		});
 		
 		
-		function addNewVideoForm () {
+		function addNewVideoForm (div) {
 			$('.multipleTemplateHideButton .removeButton').click(function(){
-				$('.multipleTemplateHideButton .multipleTemplateAdder').show();			
+				$(this).parents('.multipleTemplateHideButton').find('.multipleTemplateAdder').show();
 			});
 			
-			if ($('.embedVideoUrlInput').val() != ''){
-				$('.multipleTemplateHideButton .multipleTemplateAdder').hide();	
-				$('.embedVideoUrlInput').show();
+			if ($(div).find('.embedVideoUrlInput').val() != ''){
+				$(div).parents('.multipleTemplateHideButton').find('.multipleTemplateAdder').hide();	
+				$(div).find('.embedVideoUrlInput').show();
 			}
 			else { 
-				$('.embedVideoUrlInput').hide();
+				$(div).find('.embedVideoUrlInput').hide();
 			}
-								
-				
 			// Quand on clique sur l'un des logos, la valeur du dropdown est modifiée   
-			$('.embedVideoYoutube').click(function(){ 
+			$(div).find('.embedVideoLogos').click(function(){
+				$(div).find('.embedVideoLogos').removeClass('active');
 				$(this).addClass('active');
-				$('.embedVideoVimeo').removeClass('active');
-				$('.embedVideoDailymotion').removeClass('active');
-				$('.embedVideoDropdown').val('youtube').trigger('change');
-				//On fait apparître le champ lien avec le placeholder et sa valeur 
-				$('.embedVideoUrlInput').show();
-				$('.embedVideoUrlInput').attr("placeholder", "Entrez le lien Youtube");
+				$(div).find('.embedVideoDropdown').val($(this).attr("data-serviceName")).trigger('change');
+				$(div).find('.embedVideoUrlInput').show();
+				$(div).find('.embedVideoUrlInput').attr("placeholder", $(this).attr("data-placeholder"));
 				//Lorsque l'on change de service la valeur du champ est remise à 0
-				$('.embedVideoUrlInput').val(''); 
-			})
-			
-			$('.embedVideoVimeo').click(function(){
-				$(this).addClass('active');
-				$('.embedVideoYoutube').removeClass('active');
-				$('.embedVideoDailymotion').removeClass('active');
-				$('.embedVideoDropdown').val('vimeo').trigger('change');
-				$('.embedVideoUrlInput').show();//
-				$('.embedVideoUrlInput').attr("placeholder", "Entrez le lien Vimeo");
-				$('.embedVideoUrlInput').val('');
-			})
-			$('.embedVideoDailymotion').click(function(){
-				$(this).addClass('active');
-				$('.embedVideoYoutube').removeClass('active');
-				$('.embedVideoVimeo').removeClass('active');
-				$('.embedVideoDropdown').val('dailymotion').trigger('change');
-				$('.embedVideoUrlInput').show();
-				$('.embedVideoUrlInput').attr("placeholder", "Entrez le lien Dailymotion");
-				$('.embedVideoUrlInput').val('');
-			})
+				$(div).find('.embedVideoUrlInput').val(''); 
+			});	
+
 				
-		}
+		}		
 		
-		
-		// Hook qui permet d'appeler le HTML au début de façon à ce que les div existent 
+		// Hook qui permet d'appeler le JS au moment où les div sont ajoutées au HTML 
 		mw.hook( 'pf.addTemplateInstance' ).add( function(div) {
 			
-			addNewVideoForm();
+			addNewVideoForm($(div).find('.formLinkVideo'));
 			
 		});
 		
-		addNewVideoForm();
+		$('.formLinkVideo').each(function (){
+				addNewVideoForm(this);
+		});
 
 	});
 		

@@ -42,12 +42,14 @@
 	display: none;
 }
 
-.multipleTemplateHideButton .multipleTemplateWrapper .col-md-11 {
+.multipleTemplateHideButton .multipleTemplateWrapper .col-md-11,
+.formLinkVideo {
 	width:auto !important;
 }
 
-.multipleTemplateHideButton .multipleTemplateWrapper .col-md-11 div {
-	float:left !important;
+.formLinkVideo .embedVideoFieldLink ,
+.formLinkVideo .embedVideoForm{
+	float:left;
 }
 
 .multipleTemplateHideButton .multipleTemplateWrapper .col-md-1 {

@@ -10,17 +10,20 @@ class SimpleEmbedVideo {
 	// 
 	public static function renderFormLinkVideo( $parser, $param1 = '', $param2 = '') {
 
-      $out = '<span class="embedVideoLogos embedVideoYoutube" > Youtube </span>';
-      $out .= '<span class="embedVideoLogos embedVideoVimeo"> Vimeo </span>';
-      $out .= '<span class="embedVideoLogos embedVideoDailymotion"> Daylimotion </span>';
+	  $out = '<div class="formLinkVideo">'."\n";
+	  $out .= '  <span class="embedVideoLogos embedVideoYoutube" data-serviceName="youtube" data-placeholder="Entrez une vidéo Youtube" > Youtube </span>';
+	  $out .= '  <span class="embedVideoLogos embedVideoVimeo" data-serviceName="vimeo" data-placeholder="Entrez une vidéo Vimeo" > Vimeo </span>';
+      $out .= '  <span class="embedVideoLogos embedVideoDailymotion" data-serviceName="dailymotion" data-placeholder="Entrez une vidéo Daylimotion"> Daylimotion </span>';
       
-      $out .= '<div id="embedVideoForm">';
+      $out .= '  <div class="embedVideoForm">'."\n";
       $out .= $param1;
-      $out .= '</div>';
+      $out .= '  </div>'."\n";
       
-      $out .= '<div id="embedVideoFieldLink">';
+      $out .= '  <div class="embedVideoFieldLink">'."\n";
       $out .= $param2;
-      $out .= '</div>';
+      $out .= '  </div>'."\n";
+      
+      $out .='</div>'."\n";
       
       return array( $out, 'noparse' => true, 'isHTML' => true );
    }
