@@ -9,29 +9,29 @@
 		videoForm = $('.embedVideoLogos'); // Variable qui contient les logos
 		dropdown = $('.embedVideoDropdown'); // Variable de la dropdown cachée
 		
-		
-		
+				
 		$('.embedVideoUrlInput').hide();
 		dropdown.hide();
 		
-		// Hook qui permet d'appeler le HTML au début de façon à ce que les div existent 
-		mw.hook( 'pf.addTemplateInstance' ).add( function(div) {
-			
-			$('.multipleTemplateHideButton .multipleTemplateAdder').click(function(){
-				$(this).hide();
-			})	
+		$('.multipleTemplateHideButton .multipleTemplateAdder').click(function(){
+			$(this).hide();
+		});
+		
+		
+		function addNewVideoForm () {
 			$('.multipleTemplateHideButton .removeButton').click(function(){
 				$('.multipleTemplateHideButton .multipleTemplateAdder').show();			
-			})
-						
+			});
+			
 			if ($('.embedVideoUrlInput').val() != ''){
-				console.log('Il y a déjà un lien');
+				$('.multipleTemplateHideButton .multipleTemplateAdder').hide();	
 				$('.embedVideoUrlInput').show();
 			}
-			else 
+			else { 
 				$('.embedVideoUrlInput').hide();
-
-		
+			}
+								
+				
 			// Quand on clique sur l'un des logos, la valeur du dropdown est modifiée   
 			$('.embedVideoYoutube').click(function(){ 
 				$(this).addClass('active');
@@ -50,7 +50,7 @@
 				$('.embedVideoYoutube').removeClass('active');
 				$('.embedVideoDailymotion').removeClass('active');
 				$('.embedVideoDropdown').val('vimeo').trigger('change');
-				$('.embedVideoUrlInput').show();
+				$('.embedVideoUrlInput').show();//
 				$('.embedVideoUrlInput').attr("placeholder", "Entrez le lien Vimeo");
 				$('.embedVideoUrlInput').val('');
 			})
@@ -64,53 +64,18 @@
 				$('.embedVideoUrlInput').val('');
 			})
 				
+		}
+		
+		
+		// Hook qui permet d'appeler le HTML au début de façon à ce que les div existent 
+		mw.hook( 'pf.addTemplateInstance' ).add( function(div) {
+			
+			addNewVideoForm();
 			
 		});
 		
-		$('.multipleTemplateHideButton .multipleTemplateAdder').click(function(){
-			$(this).hide();
-		})			
-		$('.multipleTemplateHideButton .removeButton').click(function(){
-				$('.multipleTemplateHideButton .multipleTemplateAdder').show();			
-		})
-		
-		if ($('.embedVideoUrlInput').val() != ''){
-			console.log('Il y a déjà un lien');
-			$('.embedVideoUrlInput').show();
-		}
-		else 
-			$('.embedVideoUrlInput').hide();
+		addNewVideoForm();
 
-		
-		$('.embedVideoYoutube').click(function(){
-			$(this).addClass('active');
-			$('.embedVideoVimeo').removeClass('active');
-			$('.embedVideoDailymotion').removeClass('active');
-			$('.embedVideoDropdown').val('youtube').trigger('change');
-			$('.embedVideoUrlInput').show(); 
-			$('.embedVideoUrlInput').attr("placeholder", "Entrez le lien Youtube");
-			$('.embedVideoUrlInput').val(''); 
-			})
-		
-		$('.embedVideoVimeo').click(function(){
-			$(this).addClass('active');
-			$('.embedVideoYoutube').removeClass('active');
-			$('.embedVideoDailymotion').removeClass('active');
-			$('.embedVideoDropdown').val('vimeo').trigger('change');
-			$('.embedVideoUrlInput').show();
-			$('.embedVideoUrlInput').attr("placeholder", "Entrez le lien Vimeo");
-			$('.embedVideoUrlInput').val('');
-			})
-		$('.embedVideoDailymotion').click(function(){
-			$(this).addClass('active');
-			$('.embedVideoYoutube').removeClass('active');
-			$('.embedVideoVimeo').removeClass('active');
-			$('.embedVideoDropdown').val('dailymotion').trigger('change');
-			$('.embedVideoUrlInput').show();
-			$('.embedVideoUrlInput').attr("placeholder", "Entrez le lien Dailymotion");
-			$('.embedVideoUrlInput').val('');
-			})
-		
 	});
 		
 })();
