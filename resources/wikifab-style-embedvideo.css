@@ -65,3 +65,7 @@
 .embedVideoUrlInput {
 	display:none;
 }
+
+.allSizeScreenButton {
+	color:red;
+}
