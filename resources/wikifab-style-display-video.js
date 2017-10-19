@@ -1,18 +1,42 @@
 (function() {
 	
 	$(document).ready(function() {
-		// Give to the iframe an id to allow to change the size 
-		$(function(){
-			$('iframe').attr('id','tutoVideoFrame');
+		
+		$('.mediumButton').addClass('active');
+		
+		$('.smallButton').click(function(){
+			
+			$('.videoContainer').addClass("smallSize");
+			$('.videoContainer').removeClass('mediumSize');
+			$('.videoContainer').removeClass('largeSize');
+			
+			$('.smallButton').addClass('active');
+			$('.mediumButton').removeClass('active');
+			$('.largeButton').removeClass('active');
+
 		});
-		$('.smallSize').click(function(){
-			$('#tutoVideoFrame').attr("width","500px");
+		
+		$('.mediumButton').click(function(){
+			
+			$('.videoContainer').addClass("mediumSize");
+			$('.videoContainer').removeClass('smallSize');
+			$('.videoContainer').removeClass('largeSize');
+			
+			$('.mediumButton').addClass('active');
+			$('.largeButton').removeClass('active');
+			$('.smallButton').removeClass('active');
+
 		});
-		$('.mediumSize').click(function(){
-			$('#tutoVideoFrame').attr("width","760px");
-		});
-		$('.largeSize').click(function(){
-			$('#tutoVideoFrame').attr("width","960px");
+		
+		$('.largeButton').click(function(){
+			
+			$('.videoContainer').addClass("largeSize");
+			$('.videoContainer').removeClass('smallSize');
+			$('.videoContainer').removeClass('mediumSize');
+			
+			$('.largeButton').addClass('active');
+			$('.mediumButton').removeClass('active');
+			$('.smallButton').removeClass('active');
 		});
 	});
 		
