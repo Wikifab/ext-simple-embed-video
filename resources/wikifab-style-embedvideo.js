@@ -43,9 +43,10 @@
 				//Lorsque l'on change de service la valeur du champ est remise à 0
 				$(div).find('.embedVideoUrlInput').val(''); 
 			});	
-
-				
+			
 		}		
+		
+		
 		
 		// Hook qui permet d'appeler le JS au moment où les div sont ajoutées au HTML 
 		mw.hook( 'pf.addTemplateInstance' ).add( function(div) {

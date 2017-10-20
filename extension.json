@@ -9,7 +9,8 @@
 	"ResourceModules": {
 		"ext.simpleembedvideo.js": {
 			"scripts": [
-				"resources/wikifab-style-embedvideo.js"
+				"resources/wikifab-style-embedvideo.js",
+				"resources/wikifab-style-display-video.js"
 			]
 		},
 		"ext.simpleembedvideo.css": {

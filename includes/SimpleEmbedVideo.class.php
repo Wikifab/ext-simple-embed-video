@@ -25,6 +25,8 @@ class SimpleEmbedVideo {
       
       $out .='</div>'."\n";
       
+      
+      
       return array( $out, 'noparse' => true, 'isHTML' => true );
    }
    

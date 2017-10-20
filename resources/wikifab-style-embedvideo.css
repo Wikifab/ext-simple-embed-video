@@ -65,3 +65,48 @@
 .embedVideoUrlInput {
 	display:none;
 }
+.smallButton
+{
+	width:30px;
+	height:15px;
+	
+}
+.mediumButton
+{
+	width:50px;
+	height:25px;
+	
+}
+.largeButton
+{
+	width:70px;
+	height:35px;
+	
+}
+.allSizeScreenButton .resizeButton
+{
+	border:2px solid #DDDDDD;
+	float:left;
+	margin-right:5px;
+	cursor:pointer;
+	
+}
+.allSizeScreenButton .resizeButton:hover
+{
+	border:2px solid black;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

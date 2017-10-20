@@ -27,9 +27,16 @@ First, you need to create the following Semantic Properties:
 
 Then, you need to create a Semantic template (called "TutoVideo") with the following code: 
 
-	{{#ev:{{{TutoVideoService|}}} | {{{TutoVideoURL|}}} }}
+	<div class="allSizeScreenButton">
+	<span class="resizeButton smallButton"> </span>
+	<span class="resizeButton mediumButton"></span>
+	<span class="resizeButton largeButton"></span>
+	</div>
+	<div class="videoContainer">
+	{{#ev:{{{service|}}} | {{{URL|}}} }}
+	</div>
 
-This code will display the video.
+This code will display the video and create 3 buttons which rezise screen video. 
 
 For more information, refer to the MediaWiki PageForm extension.
 
