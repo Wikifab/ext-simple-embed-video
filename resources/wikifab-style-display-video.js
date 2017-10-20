@@ -3,6 +3,7 @@
 	$(document).ready(function() {
 		
 		$('.mediumButton').addClass('active');
+		$('.videoContainer').addClass("mediumSize");
 		
 		$('.smallButton').click(function(){
 			
