@@ -89,14 +89,14 @@ h3.VideoTitle {
 
 .allSizeScreenButton {
 	float:right;
-	width: 94px;
+	width: 100px;
     margin-top: 21px;
 }
 
 .allSizeScreenButton .resizeButton
 {
 	border:2px solid #DDDDDD;
-	float:left;
+	float:right;
 	margin-left:8px;
 	cursor:pointer;
 	border-radius: 3px
