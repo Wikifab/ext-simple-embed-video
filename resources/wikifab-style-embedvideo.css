@@ -20,107 +20,106 @@
 }
 
 .embedVideoLogos.active, .embedVideoLogos.active:hover {
-	background-color: #52bad5;
-	border-color: #52bad5;
+    background-color: #52bad5;
+    border-color: #52bad5;
     background-position: center -43px;
     opacity: 1;
 }
 
 .embedVideoYoutube {
-	background-image: url('images/ev-logo-youtube.png')
+    background-image: url('images/ev-logo-youtube.png')
 }
 
 .embedVideoVimeo {
-	background-image: url('images/ev-logo-vimeo.png')
+    background-image: url('images/ev-logo-vimeo.png')
 }
 
 .embedVideoDailymotion {
-	background-image: url('images/ev-logo-dailymotion.png')
+    background-image: url('images/ev-logo-dailymotion.png')
 }
 
 .multipleTemplateHideButton .multipleTemplateInstance .step-nav a.addAboveButton {
-	display: none;
+    display: none;
 }
 
 .multipleTemplateHideButton .multipleTemplateWrapper .col-md-11,
 .formLinkVideo {
-	width:auto !important;
+    width:auto !important;
 }
 
 .formLinkVideo .embedVideoFieldLink ,
 .formLinkVideo .embedVideoForm{
-	float:left;
+    float:left;
 }
 
 .multipleTemplateHideButton .multipleTemplateWrapper .col-md-1 {
-	padding-left: 0px;
+    padding-left: 0px;
 }
 
 .embedVideoLogos:hover {
-	cursor: pointer;
+    cursor: pointer;
     border-color: #bbb;
     opacity: 1;
 }
 
 .embedVideoUrlInput {
-	display:none;
+    display:none;
 }
 .smallButton
 {
-	width:16px;
-	height:13px;
-	margin-top:10px;
+    width:16px;
+    height:13px;
+    margin-top:10px;
 }
 .mediumButton
 {
-	width:21px;
-	height:17px;
-	margin-top:6px;
+    width:21px;
+    height:17px;
+    margin-top:6px;
 }
 .largeButton
 {
-	width:33px;
-	height:23px;
+    width:33px;
+    height:23px;
 }
 
 h3.VideoTitle {
-	float: left;
+    float: left;
 }
 
 .allSizeScreenButton {
-	float:right;
-	width: 100px;
+    float:right;
     margin-top: 21px;
 }
 
 .allSizeScreenButton .resizeButton
 {
-	border:2px solid #DDDDDD;
-	float:left;
-	margin-left:8px;
-	cursor:pointer;
-	border-radius: 3px
-	
+    border:2px solid #DDDDDD;
+    float:left;
+    margin-left:8px;
+    cursor:pointer;
+    border-radius: 3px
+    
 }
 .allSizeScreenButton .resizeButton:hover, .allSizeScreenButton .resizeButton.active {
-	border:2px solid #52bad5;	
+    border:2px solid #52bad5;   
 }
 
 .allSizeScreenButton .resizeButton.active {
-	background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 .videoMainContainer {
-	float:left;
-	width:100%;
-	margin-top:5px;
-	background-color:#f1f1f1;
+    float:left;
+    width:100%;
+    margin-top:5px;
+    background-color:#f1f1f1;
     border-radius: 5px;
     overflow: hidden;
 }
 
 .videoContainer .embedvideo {
-	margin:auto;
+    margin:auto;
     -ms-flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -142,7 +141,7 @@ h3.VideoTitle {
 }
 
 .embedvideowrap {
-	width: 100% !important;
+    width: 100% !important;
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 25px;
@@ -159,5 +158,18 @@ h3.VideoTitle {
 
 
 
+@media (max-width: 767px) {
+
+    .allSizeScreenButton {
+        display: none;
+    }
+
+    .videoContainer.smallSize .embedvideo,
+    .videoContainer.mediumSize .embedvideo,
+    .videoContainer.largeSize .embedvideo {
+        width:100%;
+    }
+
+}
 
 
