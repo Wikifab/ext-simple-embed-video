@@ -116,6 +116,7 @@ h3.VideoTitle {
     background-color:#f1f1f1;
     border-radius: 5px;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .videoContainer .embedvideo {
