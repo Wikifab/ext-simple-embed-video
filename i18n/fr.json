@@ -3,7 +3,7 @@
 		"authors": [
 		]
 	},
-	"simple-embed-video-youtube": "Entrez une vidéo Youtube",
-	"simple-embed-video-vimeo": "Entrez une vidéo Vimeo",
-	"simple-embed-video-dailymotion": "Entrez une vidéo Dailymotion"
+	"simple-embed-video-youtube": "Entrez l'URL d'une vidéo Youtube",
+	"simple-embed-video-vimeo": "Entrez l'URL d'une vidéo Vimeo",
+	"simple-embed-video-dailymotion": "Entrez l'URL d'une vidéo Dailymotion"
 }

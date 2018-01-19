@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+		]
+	},
+	"simple-embed-video-youtube": "Inserisci un URL video Youtube",
+	"simple-embed-video-vimeo": "Inserisci un URL video Vimeo",
+	"simple-embed-video-dailymotion": "Inserisci un URL video Dailymotion"
+}
