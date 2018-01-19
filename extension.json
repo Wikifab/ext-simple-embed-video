@@ -37,5 +37,10 @@
 			"SimpleEmbedVideo::onBeforePageDisplay"
 		]
 	},
+	"MessagesDirs": {
+		"formLinkVideo": [
+			"i18n"
+		]
+	},
 	"manifest_version": 1
 }
