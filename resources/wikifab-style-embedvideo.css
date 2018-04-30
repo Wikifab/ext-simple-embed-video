@@ -83,8 +83,9 @@
     height:23px;
 }
 
-h3.VideoTitle {
+h2.VideoTitle {
     float: left;
+    font-size: 24px;
 }
 
 .allSizeScreenButton {
