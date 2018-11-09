@@ -38,8 +38,24 @@
     background-image: url('images/ev-logo-dailymotion.png')
 }
 
-.multipleTemplateHideButton .multipleTemplateInstance .step-nav a.addAboveButton {
+.multipleTemplateHideButton {
+    float: left;
+    width: 100%;
+}
+
+.multipleTemplateHideButton .multipleTemplateWrapper .multipleTemplateInstance {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.multipleTemplateHideButton .instanceAddAbove,
+.multipleTemplateHideButton .instanceRearranger {
     display: none;
+}
+
+.multipleTemplateHideButton .multipleTemplateInstance td.instanceMain {
+    padding:0;
 }
 
 .multipleTemplateHideButton .multipleTemplateWrapper .col-md-11,
