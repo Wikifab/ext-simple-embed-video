@@ -13,11 +13,10 @@
 		$('.embedVideoUrlInput').hide();
 		dropdown.hide();
 		
-		$('.multipleTemplateHideButton .multipleTemplateAdder').click(function(){
-			
-			$(this).hide();
-		});
-		
+		var instanceMax = $('.multipleTemplateList').getAttribute('maximuminstances');
+		var nbInstance = document.querySelectorAll('.multipleTemplateList .multipleTemplateInstance').length;
+		if (nbInstance >= instanceMax)
+		$('.multipleTemplateHideButton').hide();
 		
 		function addNewVideoForm (div) {
 			$('.multipleTemplateHideButton .removeButton').click(function(){
