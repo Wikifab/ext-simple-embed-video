@@ -15,14 +15,12 @@
 		dropdown.hide();
 		var instanceMax = $('.multipleTemplateList').attr('maximuminstances');
 		var nbInstance = document.querySelectorAll('.multipleTemplateList .multipleTemplateInstance').length - 1;
-		alert(nbInstance + ' sur ' + instanceMax);
 		if (nbInstance >= instanceMax){
 			$('.multipleTemplateHideButton .multipleTemplateAdder').hide();
 		}
 		$('.multipleTemplateHideButton .multipleTemplateAdder').click(function(){
 			var instanceMax = $('.multipleTemplateList').attr('maximuminstances');
 			var nbInstance = document.querySelectorAll('.multipleTemplateList .multipleTemplateInstance').length - 1;
-			alert(nbInstance + ' sur ' + instanceMax);
 			if (nbInstance + 1 >= instanceMax){
 				$(this).hide();
 			}
