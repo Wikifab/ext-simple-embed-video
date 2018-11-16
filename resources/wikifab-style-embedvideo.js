@@ -1,3 +1,4 @@
+		
 (function() {
 	// Déclarations des variables
 	var videoForm;
@@ -12,11 +13,21 @@
 				
 		$('.embedVideoUrlInput').hide();
 		dropdown.hide();
+		var instanceMax = $('.multipleTemplateList').attr('maximuminstances');
+		var nbInstance = document.querySelectorAll('.multipleTemplateList .multipleTemplateInstance').length - 1;
+		alert(nbInstance + ' sur ' + instanceMax);
+		if (nbInstance >= instanceMax){
+			$('.multipleTemplateHideButton .multipleTemplateAdder').hide();
+		}
+		$('.multipleTemplateHideButton .multipleTemplateAdder').click(function(){
+			var instanceMax = $('.multipleTemplateList').attr('maximuminstances');
+			var nbInstance = document.querySelectorAll('.multipleTemplateList .multipleTemplateInstance').length - 1;
+			alert(nbInstance + ' sur ' + instanceMax);
+			if (nbInstance + 1 >= instanceMax){
+				$(this).hide();
+			}
+		});
 		
-		var instanceMax = $('.multipleTemplateList').getAttribute('maximuminstances');
-		var nbInstance = document.querySelectorAll('.multipleTemplateList .multipleTemplateInstance').length;
-		if (nbInstance >= instanceMax)
-		$('.multipleTemplateHideButton').hide();
 		
 		function addNewVideoForm (div) {
 			$('.multipleTemplateHideButton .removeButton').click(function(){
@@ -25,7 +36,7 @@
 			
 			if ($(div).find('.embedVideoUrlInput').val() != ''){
 				var serviceNameSelected = $(div).find('.embedVideoDropdown').val();
-				$(div).parents('.multipleTemplateHideButton').find('.multipleTemplateAdder').hide();	
+//				$(div).parents('.multipleTemplateHideButton').find('.multipleTemplateAdder').hide();	
 				$(div).find('.embedVideoUrlInput').show();
 				$(div).find(".embedVideoLogos[data-servicename='" + serviceNameSelected + "']").addClass('active');
 			}
