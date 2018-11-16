@@ -7,37 +7,40 @@
 		
 		$('.smallButton').click(function(){
 			
-			$('.videoContainer').addClass("smallSize");
-			$('.videoContainer').removeClass('mediumSize');
-			$('.videoContainer').removeClass('largeSize');
+			var container = $(this).parents().siblings().children();
+			container.addClass("smallSize");
+			container.removeClass('mediumSize');
+			container.removeClass('largeSize');
 			
-			$('.smallButton').addClass('active');
-			$('.mediumButton').removeClass('active');
-			$('.largeButton').removeClass('active');
+			$(this).addClass('active');
+			$(this).siblings('.mediumButton').removeClass('active');
+			$(this).siblings('.largeButton').removeClass('active');
 
 		});
 		
 		$('.mediumButton').click(function(){
 			
-			$('.videoContainer').addClass("mediumSize");
-			$('.videoContainer').removeClass('smallSize');
-			$('.videoContainer').removeClass('largeSize');
+			var container = $(this).parents().siblings().children();
+			container.addClass("mediumSize");
+			container.removeClass('smallSize');
+			container.removeClass('largeSize');
 			
-			$('.mediumButton').addClass('active');
-			$('.largeButton').removeClass('active');
-			$('.smallButton').removeClass('active');
+			$(this).addClass('active');
+			$(this).siblings('.largeButton').removeClass('active');
+			$(this).siblings('.smallButton').removeClass('active');
 
 		});
 		
 		$('.largeButton').click(function(){
 			
-			$('.videoContainer').addClass("largeSize");
-			$('.videoContainer').removeClass('smallSize');
-			$('.videoContainer').removeClass('mediumSize');
+			var container = $(this).parents().siblings().children();
+			container.addClass("largeSize");
+			container.removeClass('smallSize');
+			container.removeClass('mediumSize');
 			
-			$('.largeButton').addClass('active');
-			$('.mediumButton').removeClass('active');
-			$('.smallButton').removeClass('active');
+			$(this).addClass('active');
+			$(this).siblings('.mediumButton').removeClass('active');
+			$(this).siblings('.smallButton').removeClass('active');
 		});
 	});
 		
