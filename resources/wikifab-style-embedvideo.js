@@ -29,7 +29,7 @@
 		
 		function addNewVideoForm (div) {
 			$('.removeButton').click(function(){
-				$(this).parents('.multipleTemplateHideButton').find('.multipleTemplateAdder').show();
+				$('p').children('.multipleTemplateAdder').show();
 			});
 			
 			if ($(div).find('.embedVideoUrlInput').val() != ''){
