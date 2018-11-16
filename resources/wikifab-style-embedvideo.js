@@ -28,7 +28,7 @@
 		
 		
 		function addNewVideoForm (div) {
-			$('.multipleTemplateHideButton .removeButton').click(function(){
+			$('.removeButton').click(function(){
 				$(this).parents('.multipleTemplateHideButton').find('.multipleTemplateAdder').show();
 			});
 			
