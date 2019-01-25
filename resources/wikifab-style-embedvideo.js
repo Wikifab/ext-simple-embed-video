@@ -13,27 +13,31 @@
 
 		$('.embedVideoUrlInput').hide();
 		dropdown.hide();
-		var instanceMax = $('.multipleTemplateList').attr('maximuminstances');
-		var nbInstance = document.querySelectorAll('.multipleTemplateList .multipleTemplateInstance').length - 1;
+
+		var instanceMax = $('.multipleTemplateHideButton .multipleTemplateList').attr('maximuminstances');
+			
+		var nbInstance = $('.multipleTemplateHideButton .multipleTemplateList .multipleTemplateInstance').length;
+
 		if (nbInstance >= instanceMax){
 			$('.multipleTemplateHideButton .multipleTemplateAdder').hide();
-
-			$('.removeButton').click(function(){
-				$('p').children('.multipleTemplateAdder').show();
-			});
 		}
-		$('.multipleTemplateHideButton .multipleTemplateAdder').click(function(){
-			var instanceMax = $('.multipleTemplateList').attr('maximuminstances');
-			var nbInstance = document.querySelectorAll('.multipleTemplateList .multipleTemplateInstance').length - 1;
-			if (nbInstance + 1 >= instanceMax){
-				$(this).hide();
-			}
-		});
 
+		$('.multipleTemplateHideButton .removeButton').click(function(){
+				$('.multipleTemplateHideButton .multipleTemplateAdder').show();
+			});
 
 		function addNewVideoForm (div) {
-			$('.removeButton').click(function(){
-				$('p').children('.multipleTemplateAdder').show();
+
+			var instanceMax = $('.multipleTemplateHideButton .multipleTemplateList').attr('maximuminstances');
+			
+			var nbInstance = $('.multipleTemplateHideButton .multipleTemplateList .multipleTemplateInstance').length;
+
+			if (nbInstance >= instanceMax){
+				$('.multipleTemplateHideButton .multipleTemplateAdder').hide();
+			}
+
+			$('.multipleTemplateHideButton .removeButton').click(function(){
+				$('.multipleTemplateHideButton .multipleTemplateAdder').show();
 			});
 
 			if ($(div).find('.embedVideoUrlInput').val() != ''){
@@ -63,7 +67,9 @@
 		// Hook qui permet d'appeler le JS au moment où les div sont ajoutées au HTML
 		mw.hook( 'pf.addTemplateInstance' ).add( function(div) {
 
-			addNewVideoForm($(div).find('.formLinkVideo'));
+			if ( $(div).parents('.multipleTemplateHideButton').length > 0 ) {
+				addNewVideoForm($(div).find('.formLinkVideo'));
+			}
 
 		});
 
