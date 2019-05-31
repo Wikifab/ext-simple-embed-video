@@ -102,11 +102,12 @@
 h2.VideoTitle {
     float: left;
     font-size: 24px;
+    margin-top: 0px;
 }
 
 .allSizeScreenButton {
     float:right;
-    margin-top: 21px;
+    margin-top: 7px;
 }
 
 .allSizeScreenButton .resizeButton
@@ -133,7 +134,7 @@ h2.VideoTitle {
     background-color:#f1f1f1;
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .videoContainer .embedvideo,
